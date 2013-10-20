@@ -51,6 +51,6 @@ def action_create
     #ignoring: WindowStyle, Hotkey, IconLocation
     @link.Save
     Chef::Log.info("Added #{@new_resource} shortcut")
-    new_resource.updated_by_last_action(true)
+    @updated = true
   end
 end
