@@ -17,7 +17,7 @@
 # limitations under the License.
 
 default["jetty"]["host"] = "0.0.0.0"
-default["jetty"]["port"] = 8080
+default["jetty"]["port"] = 3030
 default["jetty"]["no_start"] = 0
 default["jetty"]["jetty_args"] = ""
 default["jetty"]["java_options"] = "-Xmx256m -Djava.awt.headless=true"
@@ -38,12 +38,12 @@ when "centos","redhat","fedora","amazon","scientific"
 when "debian","ubuntu"
   set["jetty"]["user"] = "jetty"
   set["jetty"]["group"] = "jetty"
-  set["jetty"]["home"] = "/usr/share/jetty"
-  set["jetty"]["config_dir"] = "/etc/jetty"
-  set["jetty"]["log_dir"] = "/var/log/jetty"
-  set["jetty"]["tmp_dir"] = "/var/cache/jetty/data"
-  set["jetty"]["context_dir"] = "/etc/jetty/contexts"
-  set["jetty"]["webapp_dir"] = "/var/lib/jetty/webapps"
+  set["jetty"]["home"] = "/opt/jetty"
+  set["jetty"]["config_dir"] = "/etc/jetty_new"
+  set["jetty"]["log_dir"] = "/var/log/jetty_new"
+  set["jetty"]["tmp_dir"] = "/var/cache/jetty/data_bew"
+  set["jetty"]["context_dir"] = "/etc/jetty_new/contexts"
+  set["jetty"]["webapp_dir"] = "/var/lib/jetty_new/webapps"
 else
   set["jetty"]["user"] = "jetty"
   set["jetty"]["group"] = "jetty"
